@@ -1,0 +1,231 @@
+html,
+body,
+.container-fluid {
+  height: 100%;
+  color: white;
+  font:  'lucida sans', 'trebuchet MS', 'Tahoma';
+  background: #282c34;
+  font-weight: 500; 
+}
+
+.loginContainer{
+  height:94vh;
+}
+
+.timeContainer{
+  height: 6vh;
+}
+
+/* --------------------------- MOBILE VERSION ------------------------------ */
+.page {
+  height: 94vh;
+  font-size:0.75em;
+}
+
+.cover {
+  background-color: white;
+  color: rgb(75, 75, 72);
+  font-size: 1em;
+  padding: 2em 2em 2em 2em ;
+  max-width:350px;
+  width:100%;
+  border-radius: 1em;
+  position: relative;
+  box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+ }
+
+.ErrorMsg{
+  font-size: 0.735em;
+  text-align:left;
+  height:10px;
+  color: red;
+}
+
+.labelStyle{
+  font-size: 0.75em;
+  text-align:left;
+  color: rgb(133, 128, 128);
+}
+
+.userTextboxSuccess{
+  border: 2pt solid green;
+  background-color: rgb(27, 167, 99);
+  width: 100%;
+  border-radius: 0.25em;
+  text-align: left;
+  height:45px;
+  color: white;
+  font-size: 0.75em;
+  padding-left: 40px;
+  outline: none;
+}
+
+.userTextboxFailure{
+  padding-left: 40px;
+  border: 2pt solid red;
+  background-color: rgb(241, 167, 167);
+  width: 100%;
+  border-radius: 0.25em;
+  text-align: left;
+  height:45px;
+  color: white;
+  font-size: 0.75em;
+  outline: none;
+}
+
+.userTextbox {
+  border: 2pt solid rgb(229, 226, 226);
+  background-color: rgb(229, 226, 226);
+  width: 100%;
+  border-radius: 0.25em;
+  text-align: left;
+  height:45px;
+  color: black;
+  font-size: 0.75em;
+  outline: none;
+  padding-left: 40px;
+}
+
+.userTextbox:focus {
+  outline-color: rgb(32, 177, 255);
+  border: 2pt solid rgb(229, 226, 226);
+  background-color: rgb(229, 226, 226);
+  width: 100%;
+  border-radius: 0.25em;
+  text-align: left;
+  padding-left: 40px;
+  height:45px;
+  color: rgb(133, 128, 128);
+  }
+
+.wrapper {
+  position: relative;
+  margin-top: 4vmin;
+}
+
+.icon {
+  position: absolute;
+  left: 3%;
+  top: calc(51% - 0.5em);
+  font-size: 20px;
+  color: rgb(133, 128, 128);
+}
+
+.iconSuccess {
+  position: absolute;
+  left: 3%;
+  top: calc(50% - 0.5em);
+  font-size: 20px;
+  color:white
+}
+
+.icon1Success {
+  color:white;
+  position: absolute;
+  right: 3%;
+  top: calc(50% - 0.5em);
+  font-size: 20px;
+}
+
+.icon1 {
+  color: rgb(133, 128, 128);
+  position: absolute;
+  right: 3%;
+  top: calc(50% - 0.5em);
+  font-size: 20px;
+}
+
+.login-btn {
+  text-align: center;  
+  margin-top: 4vmin;
+  width: 40%;outline: none;
+  height: 3em;
+  background-color: rgb(32, 177, 255);
+  border:1pt solid rgb(32, 177, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(229, 226, 226);
+  transition: 0.5s;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  transform: scale(1.25);
+}
+
+.hide {
+  position: absolute;
+  transform: scale(0);
+}
+
+.login-popupSuccess {
+  position: absolute;
+  height: 7.5em;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+  border-radius: 0.25em;
+  background-color: white;
+  color: green;
+  bottom: 20px;
+  padding: 5px;
+  transform: scale(1);
+  transition: 1.5s;
+}
+
+.login-popup {
+  position: absolute;
+  height: 7.5em;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red;
+  border-radius: 0.25em;
+  background-color: white;
+  color: red;
+  bottom: 20px;
+  padding: 5px;
+  transform: scale(1);
+  transition: 1.5s;
+}
+
+.active-animation {
+  background: linear-gradient(90deg, black 0%, transparent 0%), 
+              linear-gradient(90deg, rgb(109, 109, 107) 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
+  background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+  border-radius: 5px;
+  padding: 1px 10px 10px 10px;
+  animation: dash 5s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes dash {
+  to {
+      background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+/* -------------------- TABLET OPTIMIZATION -------------------- */
+@media only screen and (min-device-width: 37em) {
+  .page {
+      font-size: 1em;
+  }
+
+}
+
+/* -------------------- DESKTOP OPTIMIZATION -------------------- */
+@media only screen and (min-device-width: 64em) {
+  .page {
+      font-size: 1em;
+  }
+
+}
