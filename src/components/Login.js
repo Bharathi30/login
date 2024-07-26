@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import "../App.css"
+import "../style/App.css"
 
 import axios from 'axios'
 
@@ -54,6 +54,7 @@ const LoginForm = () => {
         let res = await api.get('/users');
 
         updateUserInfo(res.data)
+        console.log(res.data)
 
     }
 
@@ -105,7 +106,7 @@ const LoginForm = () => {
 
             if (inputValue.emailoruser.trim() === '') {
 
-                setInputValue({ ...inputValue, emailoruserError: "Enter User", emailoruserStatus: 'failure' });
+                setInputValue({ ...inputValue, emailoruserError: "Enter Username/Email", emailoruserStatus: 'failure' });
 
             } else if (!userValidation) {
 
@@ -162,7 +163,7 @@ const LoginForm = () => {
 
             showPopup("login-popupSuccess")
 
-            setTimeout(() => showPopup("hide"), 2500);
+            setTimeout(() => showPopup("hide"), 1000);
 
             setInputValue({ ...inputValue, emailoruserStatus: 'success', emailoruserError: '' });
 
